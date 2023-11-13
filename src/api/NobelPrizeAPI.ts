@@ -12,12 +12,12 @@ export interface ItemLinks {
 }
 
 interface Laureate {
-    id?: number;
-    name?: Translation;
-    portion?: Laureate.PortionEnum;
-    sortOrder?: Laureate.SortOrderEnum;
+    id: number;
+    name: Translation;
+    portion: Laureate.PortionEnum;
+    sortOrder: Laureate.SortOrderEnum;
     motivation?: Translation;
-    links?: Array<ItemLinks>;
+    links: Array<ItemLinks>;
 }
 
 namespace Laureate {
@@ -54,9 +54,9 @@ interface NobelPrize {
 interface NobelPrizesMeta {
     offset: number;
     limit: number;
-    nobelPrizeYear: number;
-    yearTo: number;
-    nobelPrizeCategory: string;
+    nobelPrizeYear?: number;
+    yearTo?: number;
+    nobelPrizeCategory?: NobelPrizeCategory;
     count: number;
 }
 
@@ -96,6 +96,6 @@ export async function nobelPrizesGet(offset: number,
 
     const result = await fetch(buildQueryString(endpoint, parameters));
 
-    return result.json();
+    return await result.json();
 }
 
