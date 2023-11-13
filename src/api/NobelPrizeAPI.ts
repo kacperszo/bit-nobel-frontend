@@ -12,8 +12,9 @@ export interface ItemLinks {
 }
 
 interface Laureate {
-    id: number;
-    name: Translation;
+    id: string;
+    knownName: Translation;
+    fullName: Translation;
     portion: Laureate.PortionEnum;
     sortOrder: Laureate.SortOrderEnum;
     motivation?: Translation;
@@ -21,18 +22,8 @@ interface Laureate {
 }
 
 namespace Laureate {
-    export enum PortionEnum {
-        _1 = <any>'1',
-        _12 = <any>'1/2',
-        _13 = <any>'1/3',
-        _14 = <any>'1/4'
-    }
-
-    export enum SortOrderEnum {
-        _1 = <any>'1',
-        _2 = <any>'2',
-        _3 = <any>'3'
-    }
+    export type PortionEnum = "1" | '1/2' | '1/3' | '1/4'
+    export type SortOrderEnum = '1' | '2' | '3'
 }
 
 interface Translation {
@@ -42,13 +33,14 @@ interface Translation {
 }
 
 interface NobelPrize {
-    awardYear: number;
+    awardYear: string;
     category: Translation;
     categoryFullName: Translation;
     dateAwarded: string;
     prizeAmount: number;
     prizeAmountAdjusted: number;
     laureates: Array<Laureate>;
+    links: Array<ItemLinks>
 }
 
 interface NobelPrizesMeta {
@@ -58,11 +50,14 @@ interface NobelPrizesMeta {
     yearTo?: number;
     nobelPrizeCategory?: NobelPrizeCategory;
     count: number;
+    terms?: string;
+    license?: string;
+    disclaimer?: string;
 }
 
 interface Links {
     first: string;
-    prev: string;
+    prev?: string;
     self: string;
     next: string;
     last: string;
@@ -72,7 +67,7 @@ export interface NobelPrizesResult {
 
     nobelPrizes: Array<NobelPrize>;
     meta: NobelPrizesMeta;
-    links: Array<Links>;
+    links: Links;
 }
 
 interface nobelPrizesGetParameters {
