@@ -1,6 +1,14 @@
 import {buildQueryString, QueryParameter} from "@/utils/queryBuilder";
 
 describe('buildQueryString', () => {
+    test('should build a query string when no parameters provided', () => {
+        const endpoint = 'https://example.com/api';
+        const parameters: QueryParameter[] = [];
+
+        const result = buildQueryString(endpoint, parameters);
+
+        expect(result).toBe('https://example.com/api');
+    });
     test('should build a query string with one parameter', () => {
         const endpoint = 'https://example.com/api';
         const parameters: QueryParameter[] = [{name: 'param1', value: 'value1'}];

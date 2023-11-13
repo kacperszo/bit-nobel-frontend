@@ -75,24 +75,32 @@ export interface NobelPrizesResult {
     links: Array<Links>;
 }
 
-export async function nobelPrizesGet(offset: number,
-                                     limit: number,
-                                     sort: 'asc' | 'desc',
-                                     nobelPrizeYear: number,
-                                     nobelPrizeCategory?: NobelPrizeCategory
+interface nobelPrizesGetParameters {
+    offset?: number,
+    limit?: number,
+    sort?: 'asc' | 'desc',
+    nobelPrizeYear?: number,
+    nobelPrizeCategory?: NobelPrizeCategory
+}
+
+export async function nobelPrizesGet({
+                                         offset,
+                                         limit,
+                                         sort,
+                                         nobelPrizeYear,
+                                         nobelPrizeCategory
+                                     }: nobelPrizesGetParameters
 ): Promise<NobelPrizesResult> {
     const endpoint = `${NOBEL_API_BASE_URL}/nobelPrizes`;
 
-    const parameters: QueryParameter[] = [
-        {name: "offset", value: offset},
-        {name: "limit", value: limit},
-        {name: "sort", value: sort},
-        {name: "nobelPrizeYear", value: nobelPrizeYear},
-    ]
+    const parameters: QueryParameter[] = []
 
-    if (nobelPrizeCategory) {
-        parameters.push({name: "nobelPrizeCategory", value: nobelPrizeCategory})
-    }
+    if (offset) parameters.push({name: "offset", value: offset})
+    if (limit) parameters.push({name: "limit", value: limit})
+    if (sort) parameters.push({name: "sort", value: sort})
+    if (nobelPrizeYear) parameters.push({name: "nobelPrizeYear", value: nobelPrizeYear})
+    if (nobelPrizeCategory) parameters.push({name: "nobelPrizeCategory", value: nobelPrizeCategory})
+
 
     const result = await fetch(buildQueryString(endpoint, parameters));
 
