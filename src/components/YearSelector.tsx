@@ -3,8 +3,10 @@ import {nobelPrizesGet} from "@/api/NobelPrizeAPI";
 import {getYearRangeFromPrizesResult} from "@/utils/getYearRangeFromPrizesResult";
 import {Button, Card, Select} from "antd";
 import {router} from "next/client";
+import {useRouter} from "next/router";
 
 export default function YearSelector() {
+    const router = useRouter();
     const [options, setOptions] = useState<Array<{ value: number, label: number }>>()
     const [loading, setLoading] = useState<boolean>(true)
     const [selectedYear, setSelectedYear] = useState<number | null>(null)
@@ -28,9 +30,7 @@ export default function YearSelector() {
     }, []);
 
     const onSubmit = () => {
-        if (selectedYear) {
-            router.push(`/nagrody/en/${selectedYear}`);
-        }
+        if(selectedYear) router.push(`/nagrody/en/${selectedYear}`);
     }
     return <Card title="Select Year" style={{maxWidth: 500, width: "100%"}}>
         <Select
