@@ -84,7 +84,7 @@ export async function nobelPrizesGet({
                                          sort,
                                          nobelPrizeYear,
                                          nobelPrizeCategory
-                                     }: nobelPrizesGetParameters
+                                     }: nobelPrizesGetParameters = {}
 ): Promise<NobelPrizesResult> {
     const endpoint = `${NOBEL_API_BASE_URL}/nobelPrizes`;
 
