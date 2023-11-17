@@ -1,7 +1,14 @@
 import Head from 'next/head'
 import {Inter} from 'next/font/google'
-import {Button} from "antd";
+import {Button, Card, Select} from "antd";
+import {useEffect, useState} from "react";
+import {nobelPrizesGet} from "@/api/NobelPrizeAPI";
+import {getYearRangeFromPrizesResult} from "@/utils/getYearRangeFromPrizesResult";
+import {Layout, Menu, theme} from 'antd';
+import {router} from "next/client";
+import YearSelector from "@/components/YearSelector";
 
+const {Header, Content, Footer, Sider} = Layout;
 const inter = Inter({subsets: ['latin']})
 
 export default function Home() {
@@ -15,9 +22,20 @@ export default function Home() {
                 <meta name="author" content="Kacper Szot"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <div className="App">
-                <Button type="primary">Button</Button>
-            </div>
+            <Layout
+                style={{
+                    position: "relative",
+                    display: 'flex',
+                    width: "100vw",
+                    minHeight: "100vh",
+                    alignItems: 'center',
+                    justifyItems: "center",
+                    justifyContent: "center"
+                }}>
+
+                <YearSelector/>
+
+            </Layout>
         </>
     )
 }
