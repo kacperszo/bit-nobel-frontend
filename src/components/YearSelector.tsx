@@ -28,7 +28,9 @@ export default function YearSelector() {
     }, []);
 
     const onSubmit = () => {
-        router.push(`/nagrody/en/${selectedYear || ""}`);
+        if (selectedYear) {
+            router.push(`/nagrody/en/${selectedYear}`);
+        }
     }
     return <Card title="Select Year" style={{maxWidth: 500, width: "100%"}}>
         <Select
