@@ -1,40 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Projekt rekrutacyjny BIT WEB
 
-## Getting Started
+### O mnie
 
-First, run the development server:
+Mam na imię Kacper, na mojej dotychczasowej drodze miałem okazję zgłębiać kilka języków programowania, między innymi
+Java, CPP, PHP, JS, TS
+oraz C#.
+
+Ostatnie lata poświęciłem głównie pracy z [freely](freely.digital), gdzie zdobywałem i doskonaliłem umiejętności w
+wykorzystywaniu JS, TS, PHP, Laravela oraz Expressa. To środowisko stało się moim codziennym polem do działania,
+umożliwiając mi ciągły rozwój i rozszerzanie umiejętności.
+
+Jestem przekonany, że moje długoletnie zaangażowanie w programowanie, razem z różnorodnością moich doświadczeń, pozwoli mi
+wnosić świeże spojrzenie i sprawnie współpracować w ramach sekcji.
+
+### Instrukcja uruchomienia
+
+Aplikacja została napisana w Next.js, więc jej uruchomienie wygląda dokładnie tak samo jak większość aplikacji opartych
+na Next.js.
+
+#### Pobranie zaleźności
+
+1. Otwórz terminal
+2. Przejdź do folderu, w którym znajdują się pliki aplikacji.
+3. Teraz, będąc w odpowiednim folderze, wpisz jedno z poniższych poleceń:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install #(jeśli używasz npm)
+#lub
+yarn #(jeśli używasz Yarn)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Uruchomienie aplikacji
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Nadal w tym samym terminalu.
+Wpisz jedno z poniższych poleceń i naciśnij Enter:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm run dev #(jeśli używasz npm)
+yarn dev #(jeśli używasz Yarn)
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To uruchomi aplikację na porcie `3000`.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Możesz się do niej dostać wpisując w adres przeglądarki
+``http://localhost:3000`` lub ``http://127.0.0.1:3000``.
