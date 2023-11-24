@@ -5,7 +5,7 @@ import {Button, Card, Select} from "antd";
 import {router} from "next/client";
 import {useRouter} from "next/router";
 
-export default function YearSelector() {
+export default function YearSelector({lang}: { lang: string }) {
     const router = useRouter();
     const [options, setOptions] = useState<Array<{ value: number, label: number }>>()
     const [loading, setLoading] = useState<boolean>(true)
@@ -30,7 +30,7 @@ export default function YearSelector() {
     }, []);
 
     const onSubmit = () => {
-        if(selectedYear) router.push(`/nagrody/en/${selectedYear}`);
+        if (selectedYear) router.push(`/nagrody/${lang}/${selectedYear}`);
     }
     return <Card title="Select Year" style={{maxWidth: 500, width: "100%"}}>
         <Select
@@ -44,6 +44,6 @@ export default function YearSelector() {
         <Button disabled={!selectedYear}
                 type={"primary"}
                 onClick={onSubmit}
-                style={{width: "100%", padding: 1, marginTop: 20}}>See Laureates</Button>
+                style={{width: "100%", padding: 1, marginTop: 20}}>Search prizes</Button>
     </Card>;
 }

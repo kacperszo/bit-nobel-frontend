@@ -1,17 +1,15 @@
 import Head from 'next/head'
 import {Inter} from 'next/font/google'
-import {Button, Card, Select} from "antd";
-import {useEffect, useState} from "react";
-import {nobelPrizesGet} from "@/api/NobelPrizeAPI";
-import {getYearRangeFromPrizesResult} from "@/utils/getYearRangeFromPrizesResult";
-import {Layout, Menu, theme} from 'antd';
-import {router} from "next/client";
+import {Layout} from "antd";
+import React, {useState} from "react";
 import YearSelector from "@/components/YearSelector";
+import {LanguageSelector} from "@/components/languageSelector";
 
 const {Header, Content, Footer, Sider} = Layout;
 const inter = Inter({subsets: ['latin']})
 
 export default function Home() {
+    const [lang, setLang] = useState("en")
     return (
         <>
             <Head>
@@ -22,20 +20,34 @@ export default function Home() {
                 <meta name="author" content="Kacper Szot"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <Layout
+            <Header
+                style={{
+                    position: 'absolute',
+                    top: 0,
+                    zIndex: 1,
+                    width: '100vw',
+                    display: 'flex',
+                    alignItems: 'center',
+                    alignContent: 'center',
+                    justifyItems: 'center',
+                    justifyContent: 'right',
+                    backgroundColor: "transparent"
+                }}>
+                <LanguageSelector onSelect={setLang} value={lang}/>
+            </Header>
+            <div
                 style={{
                     position: "relative",
                     display: 'flex',
-                    width: "100vw",
-                    minHeight: "100vh",
                     alignItems: 'center',
+                    height: "100vh",
                     justifyItems: "center",
                     justifyContent: "center"
                 }}>
 
-                <YearSelector/>
+                <YearSelector lang={lang}/>
 
-            </Layout>
+            </div>
         </>
     )
 }
