@@ -11,7 +11,7 @@ wykorzystywaniu JS, TS, PHP, Laravela oraz Expressa. To środowisko stało się 
 umożliwiając mi ciągły rozwój i rozszerzanie umiejętności.
 
 Jestem przekonany, że moje długoletnie zaangażowanie w programowanie, razem z różnorodnością moich doświadczeń, pozwoli mi
-wnosić świeże spojrzenie i sprawnie współpracować w ramach sekcji.
+wnieść świeże spojrzenie i sprawnie współpracować w ramach sekcji.
 
 ### Instrukcja uruchomienia
 
