@@ -1,4 +1,5 @@
 import {buildQueryString, QueryParameter} from "@/utils/queryBuilder";
+import exp from "constants";
 
 const NOBEL_API_BASE_URL = "https://api.nobelprize.org/2.1"
 
@@ -11,20 +12,18 @@ export interface ItemLinks {
     types: string;
 }
 
-interface Laureate {
+export interface Laureate {
     id: string;
     knownName: Translation;
     fullName: Translation;
-    portion: Laureate.PortionEnum;
-    sortOrder: Laureate.SortOrderEnum;
+    portion: Portion;
+    sortOrder: SortOrder;
     motivation?: Translation;
     links: Array<ItemLinks>;
 }
 
-namespace Laureate {
-    export type PortionEnum = "1" | '1/2' | '1/3' | '1/4'
-    export type SortOrderEnum = '1' | '2' | '3'
-}
+type Portion = "1" | '1/2' | '1/3' | '1/4'
+type SortOrder = '1' | '2' | '3'
 
 interface Translation {
     en?: string;
@@ -32,7 +31,7 @@ interface Translation {
     no?: string;
 }
 
-interface NobelPrize {
+export interface NobelPrize {
     awardYear: string;
     category: Translation;
     categoryFullName: Translation;
