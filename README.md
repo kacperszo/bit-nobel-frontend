@@ -6,7 +6,7 @@ Mam na imię Kacper, na mojej dotychczasowej drodze miałem okazję zgłębiać 
 Java, CPP, PHP, JS, TS
 oraz C#.
 
-Ostatnie lata poświęciłem głównie pracy z [freely](freely.digital), gdzie zdobywałem i doskonaliłem umiejętności w
+Ostatnie lata poświęciłem głównie pracy z [freely](https://freely.digital), gdzie zdobywałem i doskonaliłem umiejętności w
 wykorzystywaniu JS, TS, PHP, Laravela oraz Expressa. To środowisko stało się moim codziennym polem do działania,
 umożliwiając mi ciągły rozwój i rozszerzanie umiejętności.
 
