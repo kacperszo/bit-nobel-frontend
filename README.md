@@ -2,6 +2,9 @@
 
 Ten projekt został stworzony jako zadanie rekrutacyjne do koła naukowego. Aplikacja umożliwia wyszukiwanie i przeglądanie informacji o nagrodach Nobla.
 
+![Zrzut ekranu 2024-10-18 101019](https://github.com/user-attachments/assets/ae9a416c-24fa-453a-a552-a39ae5188c05)
+![Zrzut ekranu 2024-10-18 101341](https://github.com/user-attachments/assets/532af162-ba9b-4b43-82a8-fcd38f04dde0)
+
 ### Instrukcja uruchomienia
 
 Aplikacja została napisana w Next.js, więc jej uruchomienie wygląda dokładnie tak samo jak większość aplikacji opartych
