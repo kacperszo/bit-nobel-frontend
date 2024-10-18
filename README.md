@@ -1,17 +1,6 @@
-## Projekt rekrutacyjny BIT WEB
+## Wyszukiwarka nagród noblowskich
 
-### O mnie
-
-Mam na imię Kacper, na mojej dotychczasowej drodze miałem okazję zgłębiać kilka języków programowania, między innymi
-Java, CPP, PHP, JS, TS
-oraz C#.
-
-Ostatnie lata poświęciłem głównie pracy z [freely](https://freely.digital), gdzie zdobywałem i doskonaliłem umiejętności w
-wykorzystywaniu JS, TS, PHP, Laravela oraz Expressa. To środowisko stało się moim codziennym polem do działania,
-umożliwiając mi ciągły rozwój i rozszerzanie umiejętności.
-
-Jestem przekonany, że moje długoletnie zaangażowanie w programowanie, razem z różnorodnością moich doświadczeń, pozwoli mi
-wnieść świeże spojrzenie i sprawnie współpracować w ramach sekcji.
+Ten projekt został stworzony jako zadanie rekrutacyjne do koła naukowego. Aplikacja umożliwia wyszukiwanie i przeglądanie informacji o nagrodach Nobla.
 
 ### Instrukcja uruchomienia
 
